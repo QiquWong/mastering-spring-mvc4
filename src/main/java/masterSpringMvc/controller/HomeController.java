@@ -11,6 +11,14 @@ import java.util.List;
 public class HomeController {
     private UserProfileSession userProfileSession;
 
+    static {
+        System.out.println("HomeController");
+    }
+
+    {
+        System.out.println("HomeController is instanting...");
+    }
+
     @Autowired
     public HomeController(UserProfileSession userProfileSession) {
         this.userProfileSession = userProfileSession;

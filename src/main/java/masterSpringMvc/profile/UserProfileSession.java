@@ -22,6 +22,14 @@ public class UserProfileSession implements Serializable {
     private List<String> tastes = new ArrayList<>();
     private URL picturePath;
 
+    static {
+        System.out.println("UserProfileSession loading...");
+    }
+
+    {
+        System.out.println("HomeController is instanting...");
+    }
+
     public void saveForm(ProfileForm profileForm) {
         this.twitterHandle = profileForm.getTwitterHandle();
         this.email = profileForm.getEmail();

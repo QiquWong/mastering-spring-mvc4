@@ -21,6 +21,10 @@ public class ProfileController {
         this.userProfileSession = userProfileSession;
     }
 
+    static {
+        System.out.print("ProfileController");
+    }
+
     @ModelAttribute
     public ProfileForm getProfileForm() {
         return userProfileSession.toForm();

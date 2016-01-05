@@ -15,6 +15,10 @@ public class PictureUploadProperties {
         return anonymousPicture;
     }
 
+    static {
+        System.out.println("PictureUploadProperties");
+    }
+
     public void setAnonymousPicture(String anonymousPicture) throws IOException {
         this.anonymousPicture = new DefaultResourceLoader().getResource(anonymousPicture);
         if (!this.anonymousPicture.getFile().isFile()) {
